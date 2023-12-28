@@ -3,7 +3,8 @@ import numpy as np
 
 def divisores(n):
     div = []
-    for i in range(1, round(np.sqrt(n)) + 1 ):
+    m = round(np.sqrt(n)) + 1
+    for i in range(1, m ):
         if n % i == 0:
             div.append(i)
             if (i**2 != n) and i!=1:
