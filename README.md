@@ -12,7 +12,7 @@ The repository is organized systematically, with each problem's solution housed 
 
 ## Navigation
 
-Feel free to explore the solutions at your own pace. Each folder contains the solution code (in various programming languages) along with a detailed explanation of the approach and algorithm used.
+Feel free to explore the solutions at your own pace. Each folder contains the solution code (in various programming languages)
 ## Disclaimer
 
 This repository is intended solely for showcasing my personal solutions to Project Euler problems. It is not affiliated with Project Euler, and the solutions presented are a reflection of my individual work.
