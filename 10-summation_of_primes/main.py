@@ -1,4 +1,5 @@
 max = 2000000
+
 suma = 2
 not_visited = [True] * max
 for i in range(2, max, 2):
