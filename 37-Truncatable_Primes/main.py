@@ -18,23 +18,40 @@ for i in range(3, max, 2):
 
 not_visited = [True] * max
 
-circular_primes = 0
+truncable_primes = 0
+
+ans = 0
+
+not_included = {1, 2, 3, 5, 7}
 
 for i in primes:    # O( n * log(n) ) being n the amount of prime numbers under 1000000
-    if not_visited[i]:
+    if not_visited[i] and len(str(i)) > 1:
         flag = True
         p = str(i)
         not_visited[i] = False
-        for j in range(len(p)):
-            aux = p[1:] + p[:1]
+        temp = [i]
+        for j in range(len(p)-1):
+            aux = p[1:]
             not_visited[int(aux)] = False
             flag = flag and (int(aux) in primes) # O(log(n))
             p = aux
+            if not int(p) in temp and not int(p) in not_included:
+                temp.append(int(p))
+            if not flag:
+                break
+        p = str(i)
+        for j in range(len(p)-1):
+            aux = p[:len(p)-1]
+            not_visited[int(aux)] = False
+            flag = flag and (int(aux) in primes) # O(log(n))
+            p = aux
+            if not int(p) in temp and not int(p) in not_included:
+                temp.append(int(p))
             if not flag:
                 break
         if flag:
-            circular_primes += len(p)
+            print(temp)
+            truncable_primes += 1
+            ans += i
 
-circular_primes -= 1 # Due to 11 being counted twice but is just one count
-
-print(f" The amount of circular primes under {max} is: {circular_primes}")
+print(f" The amount of truncable primes under {max} is: {truncable_primes} and their sum is: {ans}")
