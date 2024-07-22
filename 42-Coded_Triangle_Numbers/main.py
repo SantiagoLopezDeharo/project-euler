@@ -1,4 +1,5 @@
-def is_tri_num(k):
+
+def is_tri_num(k):  # I use the bhaskaras formula tu determine the n necesary for having this value, if is an integer I return true
     n1 = ( -1 + (1 + 8*k)**0.5) / 2
     n2 = ( -1 - (1 + 8*k)**0.5) / 2
     return (n1 > 0 and n1 == int(n1)) or (n2 > 0 and n2 == int(n2))
