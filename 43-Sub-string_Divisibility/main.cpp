@@ -39,7 +39,10 @@ void calculate_ans() {
 }
 
 int main() {
+    // We calculate the answer with the function defined before
     calculate_ans();
+
+    // Finally we print the answer
     cout << ans << endl;
     return 0;
 }
