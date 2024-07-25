@@ -1,6 +1,27 @@
 #include <iostream>
 #include <cmath>
 
+/*
+
+Explanation:
+
+We need to find Tn = Pm = Hv
+
+If we force this to happen, we will get to: 
+    3.m^2 - m - n(n+1) = 0 
+    4v^2 -2v - n(n+1) = 0
+
+so we can deduct that:
+    m = (1 + sqrt(1 + 4*3*n(n+1))) / 6
+    v = (2 + sqrt(4 + 4*4*n(n+1))) / 8
+
+we can forget abour the case in which we rest the sqrt since it would always be negative
+
+so now we only have to iterate through all n's after 285 until we find one that has a m and v that are integers
+
+*/
+
+
 long long T(long long n)
 {
     return n*(n+1) / 2;
