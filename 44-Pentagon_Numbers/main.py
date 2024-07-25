@@ -16,7 +16,7 @@ def find_min_pentagonal_pair():
         pentagonals.append(P_n)
         for P_j in pentagonals[:-1]:
             P_k = P_n
-            if is_pentagonal(P_k - P_j) and is_pentagonal(P_k + P_j):
+            if is_pentagonal(P_k - P_j) and is_pentagonal(P_k + P_j):  # The first one to be find will be the minimized one since the difference will only grow while we iterate
                 return P_k - P_j
         n += 1
 
